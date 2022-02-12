@@ -3,8 +3,6 @@ package interfaceoutsidepackagedemo;
 import interfacedemo.DemoInterface;
 
 public class DemoInterfaceImpl {
-	
-	
 
 	public static void main(String[] args) {
 
