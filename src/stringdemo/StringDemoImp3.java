@@ -73,6 +73,8 @@ public class StringDemoImp3 {
 		String xyz="";
 		
 		System.out.println(xyz.isEmpty());
+		
+		
 	}
 
 }
