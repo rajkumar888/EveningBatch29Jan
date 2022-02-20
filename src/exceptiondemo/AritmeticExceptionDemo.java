@@ -28,9 +28,14 @@ public class AritmeticExceptionDemo {
 		
 		
 		try {
-			System.out.println(arr[4]);
-		} catch (Exception e1) {
-			e1.printStackTrace();
+			System.out.println(arr[5]);
+		}
+		catch(Exception e){
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		finally{
+			System.out.println("inside the finally block ");
 		}
 		
 		
