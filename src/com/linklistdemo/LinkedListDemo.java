@@ -1,15 +1,18 @@
-package com.collectionsList;
+package com.linklistdemo;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Vector;
 
 public class LinkedListDemo {
 
 	public static void main(String args[]) {
 
 		LinkedList<String> al = new LinkedList<String>();
-		System.out.println(al);
+			
 		al.add("Ravi");
 		al.add("Vijay");
 		al.add("Ravi");
@@ -19,20 +22,34 @@ public class LinkedListDemo {
 
 		System.out.println(al);
 		
-		System.out.println(al.get(0));
-		
-		System.out.println(".................");
 		
 		List<String> linklistdemo = new LinkedList<>(
 				Arrays.asList("aa", "bbb", "cat", "dog", "Computer", "Mouse", "Keyboard", "dog", null, null));
 
 		
 		System.out.println(linklistdemo);
+		
+		System.out.println(".................................");
+		
+		
+		Vector<String> vect = new Vector<String>();
+		
+		vect.add("Ravi");
+		vect.add("Vijay");
+		vect.add("Ravi");
+		vect.add("Ajay");
+		vect.add(null);
+		vect.add(null);
+
+		System.out.println(vect);
+		
+		
+//		Iterator<String> itr = al.iterator();
 //		
-//		System.out.println(".................................");
 //		
-//		
-//	
+//		while (itr.hasNext()) {
+//			System.out.println(itr.next());
+//		}
 		
 		
 		
