@@ -9,6 +9,8 @@ public class HashMapDemo1 {
 
 		LinkedHashMap<String,String> map= new LinkedHashMap<String,String>();
 		
+//		HashMap<String,String> map= new HashMap<String,String>();
+		
 		map.put("abc1", "value1");
 		map.put("abc5", "value1");
 		map.put("abc11", "value1");
@@ -27,6 +29,8 @@ public class HashMapDemo1 {
 		map.put("test1", null);
 		
 		System.out.println(map);
+		
+		
 		
 		
 		

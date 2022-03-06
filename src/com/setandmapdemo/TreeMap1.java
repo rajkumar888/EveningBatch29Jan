@@ -14,8 +14,9 @@ public class TreeMap1{
 	      map.put(101,"Vijay");    
 	      map.put(103,"Rahul");
 	      map.put(99,"Rahul111");   
-	      map.put(999,null);   
-//	      map.put(null,"xyz");   
+	      map.put(999,null);
+	      map.put(8888,null);
+	      map.put(null,"xyz");   
 	      
 	      System.out.println(map);  
 	      

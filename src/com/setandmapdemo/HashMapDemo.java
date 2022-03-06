@@ -19,33 +19,40 @@ public class HashMapDemo {
 		   
 		   System.out.println(map);
 		   
-		   System.out.println(map.get(3));
-		   System.out.println("...................");
-		   
-		   map.remove(1,"Mango123");
-		   System.out.println(map);
-		    System.out.println("...................");
-		   map.replace(2, "Apple", "Ravi");  
-		   System.out.println(map);
+//		   System.out.println(map.get(3));
+//		   System.out.println("...................");
+//		   
+//		   map.remove(1,"Mango123");
+//		   System.out.println(map);
+//		    System.out.println("...................");
+//		   map.replace(2, "Apple", "Ravi");  
+//		   System.out.println(map);
 		   
 		   
 		       
-//		   for(Map.Entry<Integer,String>   m : map.entrySet()){    
-//			   
-//		    System.out.println(m.getKey()+" "+m.getValue());    
-//		   }  
-//		
+		   for(Map.Entry<Integer,String>   m : map.entrySet()){    
+			   
+		    System.out.println(m.getKey()+" "+m.getValue());    
+		   }  
 		
+		System.out.println(".........");
 		
-//		   for( Integer   xyz :map.keySet() ){
-//			   
-//			   System.out.println(xyz+ "  "+map.get(xyz));
-//			   
-////			   System.out.println( map.get(xyz) );
-//		   }
+		   for( Integer   xyz :map.keySet() ){
+			   
+			   System.out.println(xyz+ "  "+map.get(xyz));
+			   
+		   }
 		   
+		   System.out.println(".........");
+		   map
+		   .keySet()
+		   .stream()
+		   .forEach(el-> System.out.println(el + " "+map.get(el)));
 		   
-		   
+		   System.out.println(".........");
+		   map
+		   .entrySet()
+		   .forEach(System.out::println);
 		
 	}
 

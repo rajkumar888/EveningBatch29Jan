@@ -36,5 +36,10 @@ public class Book {
 	public Book() {
 
 	}
+	
+	 public String toString()
+	    {
+	        return "[" + this.getId() + "=>" + this.getName()+ " "+this.getAuthor()+" "+this.getPublisher()+" "+this.getQuantity()+"]";
+	    }
 
 }
