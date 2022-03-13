@@ -20,14 +20,16 @@ public class CSSSelectorLocatorDemo {
 		driver.get(url);
 
 		
-		WebElement  textareaTrack = driver.findElement(By.cssSelector("#track_awbs"));
+//		WebElement  textareaTrack = driver.findElement(By.cssSelector("#track_awbs"));
+		
+		
 //		WebElement  textareaTrack = driver.findElement(By.cssSelector(".t-area"));
 //		WebElement  textareaTrack = driver.findElement(By.cssSelector("textarea[id='track_awbs']"));
 //		WebElement  textareaTrack = driver.findElement(By.cssSelector("[id='track_awbs']"));
 //		WebElement  textareaTrack = driver.findElement(By.cssSelector("textarea[id='track_awbs'],[name='AWB']"));
 //		WebElement  textareaTrack = driver.findElement(By.cssSelector("textarea[id^='track']"));
 //		WebElement  textareaTrack = driver.findElement(By.cssSelector("textarea[id$='awbs']"));
-//		WebElement  textareaTrack = driver.findElement(By.cssSelector("textarea[id*='ck_aw']"));
+		WebElement  textareaTrack = driver.findElement(By.cssSelector("textarea[id*='ck_aw']"));
 		
 		
 		textareaTrack.clear();

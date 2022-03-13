@@ -1,5 +1,6 @@
 package com.seleniumdemo.day2;
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
@@ -8,10 +9,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class FacebookCount {
+public class LocatorNameDemo {
 
-	public static void main(String[] args) throws InterruptedException {
-
+	public static void main(String[] args) throws InterruptedException, IOException {
+		Runtime.getRuntime().exec("taskkill /F /T /IM chromedriver.exe");
 		System.out.println("Begining of program......................." + new Date());
 		System.setProperty("webdriver.chrome.driver", "D:/Project/BrowserDriver/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
@@ -20,18 +21,9 @@ public class FacebookCount {
 		driver.get(url);
 
 		
-//		List<WebElement> listOfWord = driver.findElements(By.xpath("//*[contains(text(),'facebook') or contains(text(),'Facebook')]"));
 		
-//		List<WebElement> listOfWord = driver.findElements(By.xpath("//*[contains(text(),'facebook')]"));
-		List<WebElement> listOfWord = driver.findElements(By.xpath("//*[contains(text(),'Facebok')]"));
-		
-		System.out.println(listOfWord.size());
-		System.out.println(listOfWord);
-		
-//		WebElement singleelement = driver.findElement(By.xpath("//*[contains(text(),'Facebok')]"));
-//		
-//		System.out.println(singleelement);
-		
+		driver.findElement(By.id("email")).sendKeys("rajkumar888@gmail.com");
+
 		Thread.sleep(5000);
 		driver.quit();
 		System.out.println("End of program......................." + new Date());

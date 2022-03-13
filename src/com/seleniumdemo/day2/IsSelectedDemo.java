@@ -27,12 +27,28 @@ public class IsSelectedDemo {
 		System.out.println(radioOption2.isEnabled());
 		System.out.println(radioOption2.isSelected());
 		
-		Thread.sleep(15000);
+		Thread.sleep(5000);
 		radioOption2.click();
 		System.out.println("........................After clicking");
 		System.out.println(radioOption2.isDisplayed());
 		System.out.println(radioOption2.isEnabled());
 		System.out.println(radioOption2.isSelected());
+		
+		WebElement chkbox2 = driver.findElement(By.xpath("//input[@value='checkbox2']"));
+		Thread.sleep(5000);
+		System.out.println("........................Before clicking");
+		System.out.println(chkbox2.isDisplayed());
+		System.out.println(chkbox2.isEnabled());
+		System.out.println(chkbox2.isSelected());
+		
+		chkbox2.click();
+		System.out.println("........................After clicking");
+		Thread.sleep(5000);
+		System.out.println(chkbox2.isDisplayed());
+		System.out.println(chkbox2.isEnabled());
+		System.out.println(chkbox2.isSelected());
+		
+		
 		
 		
 		Thread.sleep(5000);

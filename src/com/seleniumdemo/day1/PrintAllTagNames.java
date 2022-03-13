@@ -25,20 +25,27 @@ public class PrintAllTagNames {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));  // global wait or implicit wait
 		
 		
-//		List<WebElement> allelements = driver.findElements(By.xpath("//*"));
-//		
-//		System.out.println("Total count "+allelements.size());
+		List<WebElement> allelements = driver.findElements(By.xpath("//a"));
+	
+		System.out.println("Total count "+allelements.size());
+		
+		
+		for(  WebElement e: allelements){
+			System.out.println(e.getText()+"  "+e.getAttribute("href"));
+		}
+		
+		
 		
 		
 //		for( WebElement ele : allelements){
+//			
 //			System.out.println(ele.getTagName());
 //		}
-					
-		
-		WebElement headerElement = driver.findElement(By.xpath("//h2[contains(text(),'Facebook helps you connect')]"));
-		
-		
-		System.out.println(headerElement.isDisplayed());
+//		
+//		WebElement headerElement = driver.findElement(By.xpath("//h2[contains(text(),'Facebook helps you connect')]"));
+//		
+//		
+//		System.out.println(headerElement.isDisplayed());
 		
 		
 		
