@@ -85,5 +85,6 @@
 	<classpathentry kind="lib" path="D:/Project/selenium-java-4.1.2/lib/opentelemetry-semconv-1.10.1-alpha.jar"/>
 	<classpathentry kind="lib" path="D:/Project/selenium-java-4.1.2/lib/reactive-streams-1.0.3.jar"/>
 	<classpathentry kind="lib" path="D:/Project/selenium-java-4.1.2/lib/slf4j-api-1.7.35.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
