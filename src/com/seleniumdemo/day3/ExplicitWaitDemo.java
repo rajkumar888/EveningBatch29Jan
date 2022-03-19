@@ -35,26 +35,19 @@ public class ExplicitWaitDemo {
 		driver.get("http://demo.guru99.com/test/guru99home/" );
 		
 		
-		aTitle = driver.getTitle();
-		//compare the actual title with the expected title
-		if (aTitle.contentEquals(eTitle))
-		{
-		System.out.println( "Test Passed") ;
-		}
-		else {
-		System.out.println( "Test Failed" );
-		}
 		
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
 		
-		WebElement guru99seleniumlink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='http://www.guru99.com/']/img")));
+		WebElement guru99seleniumlink = wait
+				.until(ExpectedConditions
+						.visibilityOfElementLocated(By.xpath("//a[@href='http://www.guru99.com/']/img")));
 		
 		guru99seleniumlink.click();
 
 		
 		Thread.sleep(5000);
-		System.out.println(driver.getTitle());
-		System.out.println(driver.getCurrentUrl());
+//		System.out.println(driver.getTitle());
+//		System.out.println(driver.getCurrentUrl());
 		driver.quit();
 		System.out.println("End of program......................." + new Date());
 	}

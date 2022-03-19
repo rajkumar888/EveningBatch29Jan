@@ -20,7 +20,7 @@ public class FaceBookSelectClassDemo {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		
 		
 		long start_time = System.currentTimeMillis();

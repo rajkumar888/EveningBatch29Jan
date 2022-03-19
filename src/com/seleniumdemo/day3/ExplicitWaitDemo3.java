@@ -32,12 +32,14 @@ public class ExplicitWaitDemo3 {
 		
 		// Initialize and wait till element(link) became clickable - timeout in 10 seconds
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		
 //	
 		
-		WebElement firstelementOther=wait.until(driver1 -> driver1.findElement(By.name("q")));
-		driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
+		WebElement firstelementOther=wait
+				.until(driver1 -> driver1.findElement(By.name("q")));
+		
+		firstelementOther.sendKeys("cheese" + Keys.ENTER);
 		
 		
 		WebElement firstelement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));

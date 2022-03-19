@@ -35,7 +35,7 @@ public class ExplicitWaitDemo4 {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		WebElement element = wait
-				.until(
+								.until(
 						ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'Selenium Practise')]")));
 
 		boolean status = element.isDisplayed();

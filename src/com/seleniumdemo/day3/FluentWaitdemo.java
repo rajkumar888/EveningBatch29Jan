@@ -49,21 +49,27 @@ public class FluentWaitdemo {
 
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 				.withTimeout(Duration.ofSeconds(30))
-				.pollingEvery(Duration.ofMillis(100)).ignoring(NoSuchElementException.class)
-				.ignoring(TimeoutException.class).ignoring(RuntimeException.class);
+				.pollingEvery(Duration.ofMillis(100))
+				.ignoring(NoSuchElementException.class)
+				.ignoring(TimeoutException.class)
+				.ignoring(RuntimeException.class);
 
-		WebElement nameElementdemo = wait.until(new Function<WebDriver, WebElement>() {
-			public WebElement apply(WebDriver driver) {
+		WebElement nameElementdemo = wait
+				.until(new Function<WebDriver, WebElement>() 
+				{
+			public WebElement apply(WebDriver driver) 
+			{
 				return driver.findElement(By.name("regEmail"));
 			}
-		});
+		}
+				);
 
 		nameElementdemo.sendKeys("warren");
 
 		Thread.sleep(5000);
 		System.out.println(driver.getTitle());
 		System.out.println(driver.getCurrentUrl());
-//		driver.quit();
+		driver.quit();
 		System.out.println("End of program......................." + new Date());
 	}
 
