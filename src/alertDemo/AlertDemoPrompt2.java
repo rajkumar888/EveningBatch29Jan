@@ -42,15 +42,15 @@ public class AlertDemoPrompt2 {
 			System.out.println(alert.getText());
 			alert.sendKeys("selenium......................");
 			Thread.sleep(5000);
-//			alert.accept();
+			alert.accept();
 		}
 
 
 		Thread.sleep(5000);
 		System.out.println("=============================================");
-//		System.out.println(driver.getTitle());
-//		System.out.println(driver.getCurrentUrl());
-//		driver.quit();
+		System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
+		driver.quit();
 		System.out.println("End of program......................." + new Date());
 	}
 

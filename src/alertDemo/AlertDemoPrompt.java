@@ -37,23 +37,26 @@ public class AlertDemoPrompt {
 		
 		
 		Alert promptAlert  = new WebDriverWait(driver, Duration.ofSeconds(20))
-				.until(ExpectedConditions.alertIsPresent());
+									.until(ExpectedConditions.alertIsPresent());
+		
 		promptAlert.sendKeys("Accepting the alert");
+		Thread.sleep(15000);
+		promptAlert.accept();
 		
-		Alert alert = driver.switchTo().alert();
+//		Alert alert = driver.switchTo().alert();
 		
-		if(alert!=null){
-			System.out.println(alert.getText()+".........................alert box text message");
-			alert.sendKeys("Test User");
-			Thread.sleep(5000);
-			alert.accept();
-		}
-
-		WebElement textele = driver.findElement(By.xpath("//span[contains(.,'You entered') and contains(.,'Test User')]"));
-
-		System.out.println(textele.isDisplayed());
+//		if(alert!=null){
+//			System.out.println(alert.getText()+".........................alert box text message");
+//			alert.sendKeys("Test User");
+//			Thread.sleep(5000);
+//			alert.accept();
+//		}
+//
+//		WebElement textele = driver.findElement(By.xpath("//span[contains(.,'You entered') and contains(.,'Test User')]"));
+//
+//		System.out.println(textele.isDisplayed());
 		
-		Thread.sleep(5000);
+		Thread.sleep(15000);
 		System.out.println("=============================================");
 		System.out.println(driver.getTitle());
 		System.out.println(driver.getCurrentUrl());

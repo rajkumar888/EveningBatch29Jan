@@ -1,5 +1,6 @@
 package alertDemo;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Date;
 import java.util.List;
@@ -21,9 +22,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AlertDemo {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 
 		System.out.println("Begining of program......................." + new Date());
+		Runtime.getRuntime().exec("taskkill /F /T /IM chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", "D:/Project/BrowserDriver/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -33,24 +35,31 @@ public class AlertDemo {
 		String url = "http://demo.guru99.com/test/delete_customer.php";
 		driver.get(url);
 
-		driver.findElement(By.name("cusid")).sendKeys("53920");
+		driver.findElement(By.name("cusid")).sendKeys("1111");
 		driver.findElement(By.name("submit")).submit();
 
-		// Switching to Alert
-		Alert alert = driver.switchTo().alert();
 		
-		// Capturing alert message.
-		String alertMessage = alert.getText();
+		if(driver.switchTo().alert()!=null){
+			// Switching to Alert
+			Alert alert = driver.switchTo().alert();
+			
+			// Capturing alert message.
+			String alertMessage = alert.getText();
 
-		// Displaying alert message
-		System.out.println(alertMessage+"................................");
+			// Displaying alert message
+			System.out.println(alertMessage+"................................");
+			
+			Thread.sleep(5000);
 
-		Thread.sleep(5000);
+			// clicking on ok button on alert
+//			alert.accept();
+			
+			alert.dismiss();
 
-		// clicking on ok button on alert
-		alert.accept();
+		}
 		
-//		alert.dismiss();
+		
+		
 
 
 
