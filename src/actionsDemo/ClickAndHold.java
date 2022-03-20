@@ -27,14 +27,15 @@ public class ClickAndHold {
 		Actions actions = new Actions(driver);
 
 		// Locate the element C by By.xpath.
-		WebElement titleC = driver.findElement(By.xpath("//li[text()= 'C']"));
-		WebElement titleJ = driver.findElement(By.xpath("//li[text()= 'J']"));
+		WebElement titleA = driver.findElement(By.xpath("//li[text()= 'A']"));
+		WebElement titleG = driver.findElement(By.xpath("//li[text()= 'G']"));
 
 		// Call clickAndHold() method to perform click and hold operation on
 		// element C.
 		actions
-		.clickAndHold(titleC)
-		.moveToElement(titleJ)
+		.clickAndHold(titleA)
+		.moveToElement(titleG)
+		.pause(Duration.ofSeconds(2))
 		.pause(Duration.ofSeconds(2))
 		.release()
 		.build().perform();

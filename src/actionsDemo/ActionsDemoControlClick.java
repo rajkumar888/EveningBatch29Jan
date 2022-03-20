@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class ActionsDemoRightClick {
+public class ActionsDemoControlClick {
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -50,12 +50,21 @@ public class ActionsDemoRightClick {
 		WebElement forgottenpasswordLink = driver.findElement(By.linkText("Forgotten password?"));
 		WebElement marketplaceLink = driver.findElement(By.linkText("Marketplace"));
 
+//		actions
+//		.keyDown(Keys.CONTROL)
+//		.click(forgottenpasswordLink)
+//		.pause(Duration.ofSeconds(2))
+//		.click(marketplaceLink)
+//		.keyUp(Keys.CONTROL)
+//		.build().perform();
+		
+		
 		actions
-		.keyDown(Keys.CONTROL)
+		.keyDown(Keys.SHIFT)
 		.click(forgottenpasswordLink)
 		.pause(Duration.ofSeconds(2))
 		.click(marketplaceLink)
-		.keyUp(Keys.CONTROL)
+		.keyUp(Keys.SHIFT)
 		.build().perform();
 
 		Set<String> allwinIds = driver.getWindowHandles();
