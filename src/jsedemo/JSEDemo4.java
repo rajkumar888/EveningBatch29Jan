@@ -20,7 +20,6 @@ public class JSEDemo4 {
 				
 		System.setProperty("webdriver.chrome.driver", "D:/Project/BrowserDriver/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		WebDriver driver = new RemoteWebDriver(capabilities)
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
