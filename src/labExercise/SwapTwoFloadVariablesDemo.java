@@ -1,4 +1,4 @@
-package org.demo;
+package labExercise;
 
 public class SwapTwoFloadVariablesDemo {
 

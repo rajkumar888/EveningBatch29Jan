@@ -29,7 +29,7 @@
 	<classpathentry kind="lib" path="D:/Project/selenium-java-4.1.0/selenium-api-4.1.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/Project/selenium-java-4.1.0/selenium-api-4.1.0.jar" sourcepath="D:/Project/selenium-java-4.1.0/selenium-api-4.1.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/Project/selenium-java-4.1.0/selenium-remote-driver-4.1.0-sources.jar"/>
-	<classpathentry kind="lib" path="D:/Project/selenium-java-4.1.0/selenium-remote-driver-4.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/Project/selenium-java-4.1.0/selenium-remote-driver-4.1.0.jar" sourcepath="D:/Project/selenium-java-4.1.0/selenium-remote-driver-4.1.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/Project/selenium-java-4.1.0/selenium-devtools-v85-4.1.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/Project/selenium-java-4.1.0/selenium-devtools-v94-4.1.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/Project/selenium-java-4.1.0/selenium-devtools-v96-4.1.0-sources.jar"/>

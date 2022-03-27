@@ -1,4 +1,4 @@
-package actionsDemo;
+package iframedemo;
 
 import java.time.Duration;
 import java.util.Date;
@@ -27,15 +27,18 @@ public class SelectableDemo {
 		driver.get(url);
 		Actions actions = new Actions(driver);
 
-//		driver.switchTo().frame(0);
+		driver.switchTo().frame(0);
 		
-		WebElement frameElement = driver.findElement(By.xpath("//iframe[@class='demo-frame']"));
-		driver.switchTo().frame(frameElement);
+//		WebElement frameElement = driver.findElement(By.xpath("//iframe[@class='demo-frame']"));
+//		driver.switchTo().frame(frameElement);
 		
 		
 		List<WebElement> allItems = driver.findElements(By.xpath("//li[contains(text(),'Item')]"));
 		
+		
+		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
+		
 		js.executeScript("arguments[0].scrollIntoView(true);", allItems.get(0));
 
 		for (int i = 0; i < allItems.size(); i++) {
@@ -46,7 +49,13 @@ public class SelectableDemo {
 		}
 		actions.keyUp(Keys.CONTROL).build().perform();
 		driver.switchTo().defaultContent();
+		
+		js.executeScript("window.scrollBy(0,-1000)");   // scroll up
 
+		Thread.sleep(5000);
+		
+		js.executeScript("window.scrollBy(0,1000)"); //scroll down
+		
 		Thread.sleep(5000);
 		System.out.println("=============================================");
 		System.out.println(driver.getTitle());

@@ -1,4 +1,4 @@
-package actionsDemo;
+package jsedemo;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -42,7 +42,7 @@ public class JSEDemo3 {
         //To generate Alert window using JavascriptExecutor. Display the alert message 			
      
         js.executeScript("alert('Welcome to Devlabs!!!!');"); 
-        Thread.sleep(5000);
+//        Thread.sleep(5000);
         driver.switchTo().alert().accept();
         
         
