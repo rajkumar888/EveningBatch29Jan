@@ -37,28 +37,30 @@ public class TakeScreenShotDemo {
 
 		WebElement fileupload = driver.findElement(By.cssSelector("#uploadfile_0"));
 
-		String filepath = "C:/Users/Training/Desktop/Selenium-Reading-Material.pdf";
+		String filepath = "D:\\ProjectWorkSpace\\EveningBatch29Jan\\Selenium-Reading-Material.pdf";
 		fileupload.sendKeys(filepath);
 
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
 		
 		File srcfilename = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		
 		String filename= dateformat.format(new Date());
-		File destinationFileName = new File("D:/EveningWS/EveningJavaDemoDevLabs/Screeenshots/"+filename+".png");
+		File destinationFileName = new File("./Screenshots/"+filename+".png");
 		
 		Files.copy(srcfilename, destinationFileName);
+		
+		// ======================================= //
 
 		driver.findElement(By.cssSelector("#terms")).click();
 
 		driver.findElement(By.cssSelector("#submitbutton")).click();
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
 		
 		srcfilename = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		filename= dateformat.format(new Date());
-		destinationFileName = new File("D:/EveningWS/EveningJavaDemoDevLabs/Screeenshots/"+filename+".png");
+		destinationFileName = new File("./Screenshots/"+filename+".png");
 		Files.copy(srcfilename, destinationFileName);
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
 
 
 		WebElement confirmationTextEle = driver

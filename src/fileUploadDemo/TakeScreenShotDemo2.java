@@ -26,49 +26,25 @@ public class TakeScreenShotDemo2 {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 
-		String url = "http://demo.guru99.com/test/upload/";
+		String url = "https://www.selenium.dev/downloads/";
 		driver.get(url);
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
 		SimpleDateFormat dateformat = new SimpleDateFormat("EEE dd_MMM_yyyy HH_mm_ss");
 
-		WebElement fileupload = driver.findElement(By.cssSelector("#uploadfile_0"));
 
-		String filepath = "C:/Users/Training/Desktop/Selenium-Reading-Material.pdf";
-		fileupload.sendKeys(filepath);
 
-		Thread.sleep(5000);
-
-		File srcfilename = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
+		
+		WebElement javalogo = driver.findElement(By.cssSelector("img[src='/images/programming/java.svg']"));
+		
+		File srcfilename = ((TakesScreenshot) javalogo).getScreenshotAs(OutputType.FILE);
 		String filename = dateformat.format(new Date());
-		File destinationFileName = new File("D:/EveningWS/EveningJavaDemoDevLabs/Screeenshots/" + filename + ".png");
-		Files.copy(srcfilename, destinationFileName);
-		Thread.sleep(5000);
-		
-		driver.findElement(By.cssSelector("#terms")).click();
-		WebElement submitbuttonelement = driver.findElement(By.cssSelector("#submitbutton"));
-		
-		srcfilename = ((TakesScreenshot) submitbuttonelement).getScreenshotAs(OutputType.FILE);
-		filename = dateformat.format(new Date());
-		destinationFileName = new File("D:/EveningWS/EveningJavaDemoDevLabs/Screeenshots/" + filename + ".png");
+		File destinationFileName = new File("./Screenshots/" + filename + ".png");
 		Files.copy(srcfilename, destinationFileName);
 		
 		
-		submitbuttonelement.click();
 		Thread.sleep(5000);
-
-		srcfilename = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		filename = dateformat.format(new Date());
-		destinationFileName = new File("D:/EveningWS/EveningJavaDemoDevLabs/Screeenshots/" + filename + ".png");
-		Files.copy(srcfilename, destinationFileName);
-		Thread.sleep(5000);
-
-		WebElement confirmationTextEle = driver
-				.findElement(By.xpath("//center[contains(.,'has been successfully uploaded.')]"));
-		System.out.println(confirmationTextEle.isDisplayed() + "...................");
-
 		driver.quit();
 		System.out.println("End of program......................." + new Date());
 
